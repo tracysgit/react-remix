@@ -1,0 +1,16 @@
+html {
+  height: auto;
+  width: 100%;
+  background-image: url(public/images/background_paper4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-image: none !important;
+  }
+}
