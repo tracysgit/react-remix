@@ -1,0 +1,17 @@
+# build output and more
+/.cache
+/build
+/public/build
+/app/zzz-not-used
+
+# generated types
+
+
+# dependencies
+node_modules/
+
+# environment variables
+.env
+
+# macOS-specific files
+.DS_Store
