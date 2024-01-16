@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 
 import splashImageHoriz from "public/images/psari_transparent.png";
 import splashImageVert from "public/images/psari_transparent_rotated.png";
-import stylesUrl from "./../css/index.css";  
+import stylesUrl from "./../css/index-page.css";  
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },

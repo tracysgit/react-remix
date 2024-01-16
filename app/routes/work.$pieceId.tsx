@@ -48,19 +48,17 @@ export default function WorkPieceIdRoute() {
       {piece && piece.isActive ? (
       <div id={`piece-${piece.id}`}>
         <div className="headline--piece-wrapper">
-          <h2 id="headline--piece">{parse(`${piece.name}`)}{piece.yearCreated && `, ${piece.yearCreated}`}</h2>
-          <Button type={"button"} purpose={"back"} className={"button--back"} onClick={handleGoBack}>Back</Button>
+          <h2 id="headline--piece">{parse(`${piece.name}`)}{piece.yearCreated && ` (${piece.yearCreated})`}</h2>
+          <Button type={"button"} purpose={"back"} className={"button--back"} onClick={handleGoBack}>Back <span className="visually-hidden">to the previous page</span></Button>
         </div>
         {piece.imageFiles.card && 
         <figure className="image-container--single">
-          {/* <img src={`../../images/${piece.imageFiles.card}`} alt="" /> */}
           <picture>
             <source srcSet={`../../images/${piece.imageFiles.card}.webp`} type="image/webp" />
             <img src={`../../images/${piece.imageFiles.card}.jpg`} alt="" />
           </picture>
           {piece.imageFiles.other && 
             (piece.imageFiles.other).map((image, index) => 
-              // <img key={index} src={`../../images/${image}`} alt="" style={{marginTop: "10px"}} />
               <picture key={index}>
                 <source srcSet={`../../images/${image}.webp`} type="image/webp" style={{marginTop: "10px"}} />
                 <img src={`../../images/${image}.jpg`} alt="" style={{marginTop: "10px"}} />
